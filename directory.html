@@ -1,0 +1,42 @@
+## Directory Layout
+    node_modules/		--> nodejs依赖包
+    dist/				--> 生成用于发布的项目
+    app/                --> 开发的源代码的目录
+      css/              --> css样式文件
+        app.css         --> default stylesheet
+      img/              --> 图片文件
+      js/               --> javascript files
+        app.js          --> application
+        controllers.js  --> application controllers
+        directives.js   --> application directives
+        filters.js      --> custom angular filters
+        services.js     --> custom angular services
+      lib/              --> angular and 3rd party javascript libraries
+        angular/
+          angular.js        --> the latest angular js
+          angular.min.js    --> the latest minified angular js
+          angular-*.js      --> angular add-on modules
+          version.txt       --> version number
+      views/             --> angular view partials (partial html templates)
+        partial1.html
+        partial2.html
+      index.html        --> app layout file (the main html template file of the app)
+      index-async.html  --> just like index.html, but loads js files asynchronously
+
+    config/karma.conf.js        --> config file for running unit tests with Karma
+    config/karma-e2e.conf.js    --> config file for running e2e tests with Karma
+
+    test/               --> 测试文件的目录
+      e2e/              --> 
+        runner.html     --> end-to-end test runner (open in your browser to run)
+        scenarios.js    --> end-to-end specs
+      lib/
+        angular/                --> angular testing libraries
+          angular-mocks.js      --> mocks that replace certain angular services in tests
+          angular-scenario.js   --> angular's scenario (end-to-end) test runner library
+          version.txt           --> version file
+      unit/                     --> unit level specs/tests
+        controllersSpec.js      --> specs for controllers
+        directivessSpec.js      --> specs for directives
+        filtersSpec.js          --> specs for filters
+        servicesSpec.js         --> specs for services
